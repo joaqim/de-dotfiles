@@ -27,6 +27,13 @@ in
   home.packages = with pkgs; [
   ];
 
+  # Override GitHub identity, for this user.
+  programs.git = {
+    userName  = mkForce "Joaqim Planstedt";
+    userEmail = mkForce "${hostName}+joaqim@users.noreply.github.com";
+  };
+
+
   my.emacs.extraPackages = [(epkgs:
     with epkgs; [
     ]
